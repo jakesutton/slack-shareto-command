@@ -6,7 +6,7 @@ Use a slash command to share to a public channel regardless of your membership i
 
 ### 1. Remix this Glitch repo
 
-[![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/remix/slack-slash-command-and-dialogs-blueprint)
+[![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/remix/vivid-methane)
 
 ### 2. Create a Slack app
 
