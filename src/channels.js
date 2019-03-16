@@ -11,9 +11,7 @@ const findByName = (name) => {
   return new Promise((resolve, reject) => {
     resolve(
       all().then((result) => {
-        console.log('result: %o', result);
         const channels = result.data.channels
-        console.log('channels: %o', channels);
         return channels.find(channel => channel.name == name);
       }).catch((err) => {
         return undefined;

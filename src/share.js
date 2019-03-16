@@ -16,8 +16,6 @@ const sendMessage = (userID, channelID, text) => {
 // Share post to target channel
 const post = (userID, fromChannelID, channelName, text) => {
   channels.findByName(channelName).then((channel) => {
-    console.log(`looking for ${channelName}`);
-    console.log('found %o', channel);
     if (channel) {
       const messageAttachments = [ 
         { 
@@ -34,7 +32,7 @@ const post = (userID, fromChannelID, channelName, text) => {
       });
 
       axios.post('https://slack.com/api/chat.postMessage', messageBody).then((result) => {
-        const text = `Your post has been shared to ${channelName}!`;
+        const text = `Your post has been shared to <#${channel.id}>!`;
         sendMessage(userID, fromChannelID, text).then((res) => console.log('Sucess sent'));
       }).catch((err) => {
         debug('Share post error: %o', err);
