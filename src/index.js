@@ -29,21 +29,31 @@ app.get('/', (req, res) => {
  * Endpoint to receive /shareto slash command from Slack.
  * Checks verification token and sends the shared post
  */
-app.post('/command', (req, res) => {
+app.post('/command', async (req, res) => {
   // Verify the signing secret
   if (signature.isVerified(req)) {
     const { text, user_id, channel_id } = req.body;
     const channelName = text.split(" ")[0];
     const postText = text.substr(text.indexOf(" ") + 1);
-    
-    res.send('');
-    share.post(user_id, channel_id, channelName, postText);
+
+    let responseText = await share.post(user_id, channel_id, channelName, postText);
+    if (responseText) {
+      let message = {
+        "response_type": "ephemeral",
+        "text": responseText
+      };
+      res.setHeader('content-type', 'application/json');
+      return res.json(message);
+    } else {
+      return res.send('There was a problem sharing. Maybe try again later?');
+    }
   } else {
     debug('Verification token mismatch');
-    res.sendStatus(404);
+    return res.sendStatus(404);
   }
 });
 
 const server = app.listen(process.env.PORT || 5000, () => {
   console.log('Express server listening on port %d in %s mode', server.address().port, app.settings.env);
 });
+
