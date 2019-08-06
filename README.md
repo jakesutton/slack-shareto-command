@@ -1,12 +1,24 @@
 # Sharing great things using a Slash Command
 
-Use a slash command to share to a public channel regardless of your membership in that channel. This is useful if you don't usually hang out in a channel but you find an intersting link that you know the members in that channel would love.
+Have you ever wanted to share something awesome with a channel on Slack and had to do something like this?
+
+a) Join the channel
+b) Share your wonderful content
+c) Leave the channel
+
+Well, I have created a slash commend to help you!
+
+Use ``/shareto #channel [stuff you want to share}``
+
+This slash command will share share your content to a public channel regardless of your membership in that channel. 
+
+This is useful if you don't usually hang out in a channel but you find an interesting link that you know the members in that channel would love.
 
 ## Setup
 
 ### 1. Remix this Glitch repo
 
-[![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/remix/vivid-methane)
+[![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/remix/jolly-lavender)
 
 ### 2. Create a Slack app
 
