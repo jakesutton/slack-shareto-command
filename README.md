@@ -2,9 +2,9 @@
 
 Have you ever wanted to share something awesome with a channel on Slack and had to do something like this?
 
-a) Join the channel
-b) Share your wonderful content
-c) Leave the channel
+1. Join the channel
+2. Share your wonderful content
+3. Leave the channel
 
 Well, I have created a slash commend to help you!
 
